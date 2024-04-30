@@ -1,0 +1,66 @@
+@import 'font.css';
+@import 'color.css';
+@import 'reset.css';
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    width: 100vw;
+    height: 100vh;
+}
+.box{
+    width: 28vw;
+    height: 70vh;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-container{
+    margin: 25px;
+    width: 26vw;
+    height: 15vh;
+    background-color: var(--input-color);
+    border: none;
+    border-radius: 30px;
+    color: var(--text2-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.grid{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.grid > button{
+    width: 4.6vw;
+    height: 8vh;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--text1-color);
+    font-family: 'Inter';
+    font-size: 1.3rem;  
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.grid > .num{
+    background-color: var(--input-color);
+    color: var(--text2-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.grid > .enter{
+    background-color: var(--text1-color);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
