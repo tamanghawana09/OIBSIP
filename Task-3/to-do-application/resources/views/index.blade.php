@@ -12,38 +12,40 @@
     </section>
     <div class="container">
         <div class="form">
-            <form action="" method="POST">
+            <form action="{{ route('submit') }}" method="POST">
+              @csrf
                 <input type="text" id="title" name="title" placeholder="Title">
                 <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
         <div class="table">
+          
             <table class="table">
                 <thead>
                   <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Tasks</th>
-                    <th scope="col">Update</th>
-                    <th scope="col">Delete</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
                   </tr>
                 </thead>
                 <tbody>
+                @foreach ($users as  $value)
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td><button class="update-button">Update</button></td>
-                    <td><button class="delete-button">Delete</button></td>
+                    <td scope="row">{{$value['id']}}</td>
+                    <td>{{ $value['title'] }}</td>
+                    <td>{{ $value['description'] }}</td>
+                    <td>
+                      <form action="/delete/{{$value['id']}}" method="post">
+                        @csrf
+                        <button class="delete-button">Delete</button>
+                      </form>
+                    </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td><button class="update-button">Update</button></td>
-                    <td><button class="delete-button">Delete</button></td>
-                  </tr>
-    
+                  @endforeach
                 </tbody>
               </table>
+              
         </div>
     </div>
 </body>
