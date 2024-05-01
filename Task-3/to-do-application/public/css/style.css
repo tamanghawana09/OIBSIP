@@ -1,0 +1,131 @@
+/* style.css */
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+/* Styling navigation */
+.nav-container {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px;
+}
+
+.nav-container nav {
+    font-size: 1.5em;
+}
+
+/* Container for form and table */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Styling form */
+.form {
+    flex: 1;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form input[type="text"],
+.form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.form input[type="text"]:focus,
+.form textarea:focus {
+    border-color: #3f51b5;
+}
+
+.form button[type="submit"] {
+    padding: 12px 24px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button[type="submit"]:hover {
+    background-color: #303f9f;
+}
+
+/* Styling table */
+.table {
+    flex: 1;
+    margin-left: 20px; /* Add margin to create space between form and table */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #3f51b5;
+    color: white;
+}
+
+.table tr:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+/* Styling update button */
+.update-button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-button:hover {
+    background-color: #388e3c;
+}
+
+/* Styling delete button */
+.delete-button {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Add spacing between buttons */
+.table button + button {
+    margin-left: 8px;
+}
