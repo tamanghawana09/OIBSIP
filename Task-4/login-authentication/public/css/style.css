@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;padding: 0;
+    font-family: 'Inter';
+}
+img{
+    object-fit: cover;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent; 
+    color: #fff; 
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #fff; 
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: #fff;
+    color: #000; 
+}
+
+
+.container{
+    width: 100%;
+    height: 75vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+.container > h1{
+    font-size: 4rem;
+}
+.container > h3{
+    font-size: 1.5rem;
+}
+
+.profile-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.profile-container > .right > img{
+    width: 40vw;
+}
+.profile-container > .left > span{
+    font-size: 2rem;
+    padding: 40px;
+}
+.biography{
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    height: auto;
+    gap: 20px;
+}
+.biography > h1{
+    font-size: 2.5rem;
+}
+.biography > p{
+    padding: 0 20px; /* Adjust padding to fit content better */
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.line {
+    width: 90%;
+    height: 1px; 
+    background-color: white; /* Change line color to white */
+    margin: 20px auto; 
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+.biography > .icons > a > i{
+    color: white;
+    font-size: 2rem;
+}
+
+footer{
+    padding: 10px;
+    text-align: center;
+}
